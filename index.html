@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD JS</title>
+
+    <!-- Adicionando Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <h4>Cadastro de Jogo</h4>
+        <form onsubmit="return salvarJogo(event);">
+            <div class="row">
+                <div class="input-field col s12 m6 l4">
+                    <input type="number" id="id_tabuleiro" name="id_tabuleiro" class="validate">
+                    <label for="id_tabuleiro">ID</label>
+                </div>
+                <div class="input-field col s12 m6 l4">
+                    <input type="text" id="nome_do_jogo" name="nome_do_jogo" class="validate">
+                    <label for="nome_do_jogo">Nome</label>
+                </div>
+                <div class="input-field col s12 m6 l4">
+                    <input type="text" id="categoria" name="categoria" class="validate">
+                    <label for="categoria">Categoria</label>
+                </div>
+                <div class="input-field col s12 m6 l4">
+                    <input type="number" id="numero_de_jogadores" name="numero_de_jogadores" class="validate">
+                    <label for="numero_de_jogadores">Número de Jogadores</label>
+                </div>
+                <div class="input-field col s12 m6 l4">
+                    <input type="number" id="duracao" name="duracao" class="validate">
+                    <label for="duracao">Duração</label>
+                </div>
+            </div>
+            <button type="submit" class="btn waves-effect waves-light">Salvar Jogo</button>
+        </form>
+
+        <br>
+
+        <table class="highlight responsive-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>jogo</th>
+                    <th>Categoria</th>
+                    <th>jogadores</th>
+                    <th>duracao</th>
+                    <th colspan="2">Opções</th>
+                </tr>
+            </thead>
+            <tbody id="jogos"></tbody>
+        </table>
+    </div>
+
+    <!-- Adicionando Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
