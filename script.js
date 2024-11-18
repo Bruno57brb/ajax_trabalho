@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
   function abrirModalExcluir(id_tabuleiro) {
     idTabuleiroParaExcluir = id_tabuleiro;
-    let modalExcluir = M.Modal.getInstance(document.getElementById("modalExcluir"));
+    let modalExcluir = M.Modal.getInstance(document.getElementsByClassName("modalExcluir"));
     modalExcluir.open();
   }
   
